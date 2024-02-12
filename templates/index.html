@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GeeWAD</title>
+        <link rel="stylesheet" href="static/style.css">
+        <script src="static/script.js"></script>
+    </head>
+    <body>
+        <div class="left">
+            {{ map_html|safe }}
+        </div>
+        <div class="right">
+            <form action="/" method="post">
+                <label for="name">Title:</label>
+                    <input type="text" id="name" name="name">
+                    <br><br>
+                    <label for="satellite">Dataset:</label>
+                    <select name="satellite" id="satellite" onchange="updateBands()">
+                        <option value="" disabled selected>Choose dataset</option>
+                        <option value="Sentinel2">Sentinel2</option>
+                        <option value="Landsat8">Landsat8</option>
+                        <option value="SRTM">SRTM</option>
+                        <option value="WorldCover">World Cover</option>
+                    </select>
+                    <br><br>
+                    <div id="hiding_fields" style="display: none;">
+                        <label for="index">Index:</label>
+                        <select name="index" id="index" onchange="updateBands2()">
+                            <option value="" disabled selected>Choose index</option>
+                            <option value="">None</option>
+                            <option value="NDVI">NDVI</option>
+                            <option value="NDWI">NDWI</option>
+                            <option value="RVI">RVI</option>
+                        </select>
+                        <br><br>
+                        <div id="bands">
+                            <label for="band1" id="band1Label">Band 1:</label>
+                            <select name="band1" id="band1">
+                                <option value="" disabled selected>Choose band</option>
+                            </select>
+                            <br><br>
+                            <label for="band2" id="band2Label">Band 2:</label>
+                            <select name="band2" id="band2">
+                                <option value="" disabled selected>Choose band</option>
+                            </select>
+                                <br><br>
+                            <label for="band3" id="band3Label">Band 3:</label>
+                            <select name="band3" id="band3">
+                                <option value="" disabled selected>Choose band</option>
+                            </select>
+                            <br><br>
+                        </div>
+                        <label for="minDate">Start of date range:</label>
+                        <input type="date" id="minDate" name="minDate" value="2020-03-01">
+                        <br><br>
+                        <label for="maxDate">End of date range:</label>
+                        <input type="date" id="maxDate" name="maxDate" value="2020-09-30">
+                        <br><br>
+                    </div>
+                    <input type="submit" value="Apply">
+            </form>
+            <br>
+            <button type="button" id="applyPolygonClip" class="but" onclick="reaload_web()">Apply AOI - Area Of Interest</button>
+            <button onclick="resetAnalysis()" class="but">Reset analysis</button>
+        </div>
+    </body>
+</html>

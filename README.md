@@ -8,9 +8,9 @@ _**Why?**_ As a result, the project aims to make it easier to work with satellit
 
 ## 1. Setup & Installation 
 
-Clone the Repository [GeeWAD](https://github.com/hdebowski/gee_dynamic_web_application).
+Clone the Repository [GeeWAD](https://github.com/hdebowski/GeeWAD).
 ```bash
-git clone https://github.com/hdebowski/gee_dynamic_web_application
+git clone https://github.com/hdebowski/GeeWAD
 ```
 
 Run the Application
@@ -21,7 +21,8 @@ python run.py
 In the last step, **log in with your Google account** and accept the necessary permissions.
 
 ## 2. Quick Look 
-![](../../Animation.gif)
+![](Animation.gif)
+
 
 ## 3. Features
 
@@ -51,13 +52,13 @@ GeeWAD version 1.0.0. offers 4 datasets and basic usage of analysis satellite im
 - AJAX
 
 ## 5. Future versions
-Future versions of application will contain:
-- support Unsupervised Classification
+Future versions of the application will contain:
+- support unsupervised classification
 - download images
 - improved form dynamics
 - more datasets
 - histograms
 
 
-## 5. Developed by
-Hubert Dębowski
+## 6. Developed by
+[Hubert Dębowski](https://github.com/hdebowski)
